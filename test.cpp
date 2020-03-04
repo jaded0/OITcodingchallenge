@@ -33,5 +33,13 @@ int main() {
 
   // get ready to test the converter
   RomanConverter converter;
-  cout << answers["4"] << " " << arrayOfAnswers[4] << endl;
+  //cout << answers["4"] << " " << arrayOfAnswers[4] << endl;
+  for (size_t i = 1; i < 5001; i++){
+    cin.ignore();
+    // int input;
+    // cin >> input;
+    cout << "number " << i << " is " << converter.intToRomanNumeral(i) << ". correct = " << arrayOfAnswers[i] << endl;
+
+    cout << (converter.intToRomanNumeral(i) == arrayOfAnswers[i]) << endl;
+  }
 }
